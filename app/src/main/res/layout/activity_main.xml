@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_batik">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:paddingTop="25dp"
+             android:paddingBottom="25dp"
+             android:paddingLeft="10dp"
+             android:paddingRight="10dp">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Welcome to \nBatik Classifier App"
+                 android:textSize="35dp"
+                 android:textAlignment="center"
+                 android:textColor="@color/white"
+                 android:textStyle="bold"
+                 android:layout_marginLeft="30px"
+                 tools:ignore="MissingConstraints"/>
+
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+                 <ImageView
+                     android:id="@+id/logout_btn"
+                     android:layout_width="30dp"
+                     android:layout_height="match_parent"
+                     android:layout_alignParentRight="true"
+                     android:layout_marginRight="20dp"
+                     android:clickable="true"
+                     android:focusable="true"
+                     android:src="@drawable/logout_icon"
+                     android:layout_centerVertical="true"/>
+             </RelativeLayout>
+
+         </LinearLayout>
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1300px"
+            android:background="@color/white"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.597" />
+    </LinearLayout>
+    
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
