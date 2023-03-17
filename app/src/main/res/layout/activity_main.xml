@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="1300px"
             android:background="@color/white"
-            android:text="Hello World!"
+            android:text="Hello Hana!"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
