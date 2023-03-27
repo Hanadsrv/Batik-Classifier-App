@@ -17,31 +17,33 @@
              android:paddingTop="25dp"
              android:paddingBottom="25dp"
              android:paddingLeft="10dp"
-             android:paddingRight="10dp">
+             android:paddingRight="10dp"
+             android:gravity="center">
              <TextView
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:text="Welcome to \nBatik Classifier App"
-                 android:textSize="35dp"
+                 android:textSize="25dp"
                  android:textAlignment="center"
                  android:textColor="@color/white"
                  android:textStyle="bold"
                  android:layout_marginLeft="30px"
-                 tools:ignore="MissingConstraints"/>
+                 tools:ignore="MissingConstraints" />
 
              <RelativeLayout
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent">
+                 android:layout_width="100dp"
+                 android:layout_height="match_parent"
+                 android:gravity="right">
+
                  <ImageView
                      android:id="@+id/logout_btn"
-                     android:layout_width="30dp"
+                     android:layout_width="25dp"
                      android:layout_height="match_parent"
                      android:layout_alignParentRight="true"
-                     android:layout_marginRight="20dp"
+                     android:layout_centerVertical="true"
                      android:clickable="true"
                      android:focusable="true"
-                     android:src="@drawable/logout_icon"
-                     android:layout_centerVertical="true"/>
+                     android:src="@drawable/logout_icon" />
              </RelativeLayout>
 
          </LinearLayout>
@@ -49,17 +51,164 @@
 
 
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="1300px"
-            android:background="@color/white"
-            android:text="Hello Hana!"
+            android:background="@drawable/background_f1f1f1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.597" />
+            app:layout_constraintVertical_bias="0.597"
+            android:gravity="center"
+            android:padding="100px">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="100px">
+
+                <LinearLayout
+                    android:layout_width="700px"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_batik"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_image" />
+                    <TextView
+                        android:id="@+id/result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/percentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/result"
+                        android:layout_centerHorizontal="true"
+                        android:text=" "
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="30px"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="3"
+                android:rowCount="1">
+
+                <LinearLayout
+                    android:id="@+id/camera_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/camera" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Camera"
+                            android:textColor="@color/white"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gallery_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/image" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gallery"
+                            android:textColor="@color/white"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/live_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/stream" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Real-time"
+                            android:textColor="@color/white"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </GridLayout>
+        </LinearLayout>
     </LinearLayout>
     
 
