@@ -6,5 +6,45 @@
     android:background="@drawable/background_batik"
     tools:ignore="MissingClass">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Batik Classifier App"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"/>
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/viewRealTime"
+            android:layout_width="match_parent"
+            android:layout_height="1300px"
+            android:layout_marginLeft="70px"
+            android:layout_marginTop="50px"
+            android:layout_marginRight="70px"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="133dp"/>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:textColor="@color/white"
+            android:text=""
+            android:gravity="center_horizontal"
+            android:layout_marginTop="50px"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            tools:visibility="visible" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
