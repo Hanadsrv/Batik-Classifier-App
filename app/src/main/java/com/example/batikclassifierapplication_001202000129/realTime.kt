@@ -157,7 +157,7 @@ class realTime : AppCompatActivity() {
             )
 
             Log.d("classify", classes[maxPos])
-            return classes[maxPos] + " " + String.format("%.2f", maxPercetage) + "%"
+            return classes[maxPos] + " " + String.format("%.1f", maxPercetage*100) + "%"
         } catch (e: Exception) {
             e.printStackTrace()
         }

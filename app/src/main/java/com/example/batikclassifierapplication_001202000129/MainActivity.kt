@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Process
 import android.provider.MediaStore
+import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -23,7 +24,7 @@ import java.nio.ByteOrder
 class MainActivity : AppCompatActivity() {
 
     var imageView: ImageView? = null
-    var logout_btn: ImageView? = null
+    //var logout_btn: ImageView? = null
     var result: TextView? = null
     var percentage: TextView? = null
 
@@ -36,13 +37,15 @@ class MainActivity : AppCompatActivity() {
         supportActionBar!!.hide()
 
         imageView = findViewById(R.id.imageView)
-        logout_btn = findViewById(R.id.logout_btn)
+        //logout_btn = findViewById(R.id.logout_btn)
         result = findViewById(R.id.result)
         percentage = findViewById(R.id.percentage)
 
         val camera = findViewById<LinearLayout>(R.id.camera_btn)
         val gallery = findViewById<LinearLayout>(R.id.gallery_btn)
         val live = findViewById<LinearLayout>(R.id.live_btn)
+        val logout = findViewById<LinearLayout>(R.id.logout_btn)
+
 
         camera.setOnClickListener{
             if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
@@ -62,6 +65,23 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, realTime::class.java)
             startActivity(intent)
         }
+        logout.setOnClickListener(View.OnClickListener {
+            val alertDialogBuilder = AlertDialog.Builder(this@MainActivity)
+            alertDialogBuilder.setTitle("Exit Application?")
+            alertDialogBuilder
+                .setMessage("Click yes to exit!")
+                .setCancelable(false)
+                .setPositiveButton(
+                    "Yes"
+                ) { dialog, id ->
+                    moveTaskToBack(true)
+                    Process.killProcess(Process.myPid())
+                    System.exit(1)
+                }
+                .setNegativeButton("No") { dialog, id -> dialog.cancel() }
+            val alertDialog = alertDialogBuilder.create()
+            alertDialog.show()
+        })
 
         fun classifyImage(image: Bitmap?) {
             try {
