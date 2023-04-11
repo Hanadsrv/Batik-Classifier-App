@@ -134,7 +134,7 @@ class realTime : AppCompatActivity() {
             for (i in percentages.indices) {
                 if (percentages[i] > maxPercetage) {
                     maxPercetage = percentages[i]
-                    maxPos = 1
+                    maxPos = i
                 }
             }
 

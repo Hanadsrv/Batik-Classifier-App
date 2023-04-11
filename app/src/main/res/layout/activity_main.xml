@@ -18,46 +18,25 @@
              android:paddingBottom="25dp"
              android:paddingLeft="10dp"
              android:paddingRight="10dp"
-             android:gravity="center">
+             android:gravity="center"
+             android:orientation="vertical">
              <TextView
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:text="Welcome to \nBatik Classifier App"
-                 android:textSize="25dp"
+                 android:textSize="23dp"
                  android:textAlignment="center"
                  android:textColor="@color/white"
                  android:textStyle="bold"
                  android:layout_marginLeft="30px"
                  tools:ignore="MissingConstraints" />
-
-             <RelativeLayout
-                 android:layout_width="100dp"
-                 android:layout_height="match_parent"
-                 android:gravity="right">
-
-                 <LinearLayout
-                     android:id="@+id/logout_btn"
-                     android:layout_width="25dp"
-                     android:layout_height="match_parent"
-                     android:layout_alignParentRight="true"
-                     android:layout_centerVertical="true"
-                     android:focusable="true"
-                     android:orientation="horizontal">
-                     <LinearLayout
-                         android:layout_width="match_parent"
-                         android:layout_height="match_parent"
-                         android:gravity="right"
-                         android:orientation="vertical"
-                         android:padding="15dp">
-
-                         <ImageView
-                             android:layout_width="25dp"
-                             android:layout_height="25dp"
-                             android:src="@drawable/logout_icon" />
-                     </LinearLayout>
-                 </LinearLayout>
-             </RelativeLayout>
-
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="by Hana Desriva"
+                 android:textSize="15dp"
+                 android:textAlignment="center"
+                 android:textColor="@color/white"/>
          </LinearLayout>
 
 
@@ -65,7 +44,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1300px"
+            android:layout_height="1400px"
             android:background="@drawable/background_f1f1f1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -101,8 +80,8 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-                        android:text="yyyy"
-                        android:textColor="@color/white"
+                        android:text=""
+                        android:textColor="@android:color/white"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:visibility="visible"
@@ -113,7 +92,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:text="xxxx"
+                        android:text=""
                         android:textColor="@color/white"
                         android:textSize="15sp"
                         android:textStyle="bold"
@@ -128,7 +107,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0px">
 
             <GridLayout
                 android:layout_width="match_parent"
