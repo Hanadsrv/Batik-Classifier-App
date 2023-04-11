@@ -18,13 +18,14 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import com.example.batikclassifierapplication_001202000129.databinding.ActivityMainBinding
 import com.example.batikclassifierapplication_001202000129.ml.BatikModel
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 import java.io.IOException
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
-import com.example.batikclassifierapplication_001202000129.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 

@@ -44,7 +44,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1400px"
+            android:layout_height="1500px"
             android:background="@drawable/background_f1f1f1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
