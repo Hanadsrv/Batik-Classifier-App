@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    var REQUEST_CODE = 123
     private val imageSize = 224
 
     override fun onCreate(savedInstanceState: Bundle?) {
